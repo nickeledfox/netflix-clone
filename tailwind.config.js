@@ -15,7 +15,7 @@ module.exports = {
         xl: ['5rem', '6rem'],
         '2xl': '7rem',
       },
-      // center: true, // Centering will disable any margin styles
+      center: true, // Centering will disable any margin styles
     },
   },
 }

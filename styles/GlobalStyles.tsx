@@ -6,6 +6,7 @@ const customStyles = css({
   body: {
     backgroundColor: '#141414',
     color: '#FFFFFF',
+    overflowX: 'hidden',
   },
 })
 

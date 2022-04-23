@@ -1,4 +1,4 @@
-import tw from 'twin.macro'
+import tw, { css } from 'twin.macro'
 
 import { FiSearch } from 'react-icons/fi'
 import Logo from './Logo'
@@ -8,10 +8,26 @@ import Image from 'next/image'
 import avatar from '../assets/images/Netflix-avatar.png'
 
 import { FlexWrapper } from '../styles'
+import { useEffect, useState } from 'react'
 
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false)
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   return (
-    <FixedHeader>
+    <FixedHeader css={isScrolled && { backgroundColor: '#141414' }}>
       <Wrap tw="md:space-x-10">
         <Logo />
         <NavList>
@@ -41,27 +57,30 @@ const Header = () => {
   )
 }
 
-const Wrap = tw(FlexWrapper)`space-x-4`
-
 const FixedHeader = tw.header`
 flex
+justify-between 
 fixed 
 top-0 
 z-10 
 w-full 
-justify-between 
 px-4 py-4 
 transition 
 lg:px-12 lg:py-6`
 
+const Wrap = tw(FlexWrapper)`space-x-4`
+
 const NavList = tw.nav`
-hidden space-x-4 md:flex `
+hidden 
+space-x-4 
+md:flex `
+
 const NavLink = tw.a`
 cursor-pointer
 text-sm
 font-light
 transition
 text-[#e5e5e5]
-md:hover:text-gray-300`
+md:hover:text-gray-400`
 
 export default Header
