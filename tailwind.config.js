@@ -1,6 +1,10 @@
 module.exports = {
   purge: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
+    fontFamily: {
+      sans: ['Noto Sans', 'Arial', 'sans-serif'],
+      body: ['Helvetica'],
+    },
     extend: {
       colors: {
         'netflix-red': '#e50914',

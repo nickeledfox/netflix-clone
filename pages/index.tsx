@@ -34,7 +34,14 @@ const Home: React.FC<HomeProps> = ({
         <title>Home | Netflix</title>
       </Head>
       <Header />
-      <Hero netflixOriginals={netflixOriginals} />
+      <main>
+        <Hero netflixOriginals={netflixOriginals} />
+        <section>
+          <Container>
+            <p>Hello World</p>
+          </Container>
+        </section>
+      </main>
     </PageWrapper>
   )
 }

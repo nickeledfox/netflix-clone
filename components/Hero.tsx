@@ -48,10 +48,10 @@ const Hero = ({ netflixOriginals }: HeroProps) => {
             Play
           </Button>
           <Button variant={'secondary'}>
-            More Info
             <i>
               <HiInformationCircle />
             </i>
+            More Info
           </Button>
         </BtnWraper>
       </Container>
@@ -73,10 +73,10 @@ const BtnWraper = tw(FlexWrapper)`space-x-3 py-5 lg:pt-10`
 const Banner = tw.div`
 absolute z-[-10]
 top-0 left-0 
-h-[95vh] w-screen 
+h-[810px] w-screen 
 `
 
-const Title = tw(Heading)`pb-4 lg:pb-6`
+const Title = tw(Heading)`pb-1.5 md:pb-2 lg:pb-3`
 
 const MovieOverview = tw(Paragraph)`
 text-shadow-md

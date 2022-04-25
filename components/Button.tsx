@@ -16,7 +16,7 @@ const Button = styled.button(({ variant }: ButtonProps) => [
   md:py-2.5 md:px-8 md:text-xl 
   whitespace-nowrap border-[1px]
   
-  [> i]:(text-2xl md:text-3xl lg:text-4xl) // > Button Icons
+  [> i]:(text-2xl md:text-3xl lg:text-3xl) // > Button Icons
   `,
 
   tw`hocus:(outline-none)`,
