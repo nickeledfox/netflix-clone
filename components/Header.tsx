@@ -27,7 +27,7 @@ const Header = () => {
   }, [])
 
   return (
-    <FixedHeader css={isScrolled && { backgroundColor: '#141414' }}>
+    <FixedHeader css={isScrolled && { background: '#141414' }}>
       <Wrap tw="md:space-x-10">
         <Logo />
         <NavList>
@@ -66,14 +66,17 @@ z-10
 w-full 
 px-4 py-4 
 transition 
-lg:px-12 lg:py-6`
+lg:px-12 lg:py-2
+bg-gradient-to-b from-[rgba(20, 20, 20, 0.5)] to-[rgba(20, 20, 20, 0)] 
+`
 
 const Wrap = tw(FlexWrapper)`space-x-4`
 
 const NavList = tw.nav`
 hidden 
 space-x-4 
-md:flex `
+md:flex
+`
 
 const NavLink = tw.a`
 cursor-pointer
@@ -81,6 +84,7 @@ text-sm
 font-light
 transition
 text-[#e5e5e5]
-md:hover:text-gray-400`
+md:hocus:text-white
+`
 
 export default Header

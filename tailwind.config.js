@@ -1,5 +1,13 @@
 module.exports = {
+  purge: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
+    extend: {
+      colors: {
+        'netflix-red': '#e50914',
+        black: '#000',
+        dark: '#2B2B2B',
+      },
+    },
     container: {
       padding: {
         DEFAULT: '1rem',

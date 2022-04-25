@@ -1,35 +1,56 @@
-import tw, { styled, css, theme } from 'twin.macro'
+import tw, { styled, css } from 'twin.macro'
 
 interface ButtonProps {
-  variant?: 'primary' | 'secondary'
-  isSmall?: boolean
+  variant?: 'primary' | 'secondary' | 'white' | 'border'
 }
 
-const Button = styled.button(({ variant, isSmall }: ButtonProps) => [
-  // The common button styles added with the tw import
-  tw`px-8 py-2 rounded focus:outline-none transform duration-75`,
+const Button = styled.button(({ variant }: ButtonProps) => [
+  tw`
+  flex 
+  items-center 
+  gap-x-2 
+  rounded 
+  px-5 py-1.5 
+  text-sm font-semibold capitalize
+  transition 
+  md:py-2.5 md:px-8 md:text-xl 
+  whitespace-nowrap border-[1px]`,
 
-  // Use the variant grouping feature to add variants to multiple classes
-  tw`hocus:(scale-105 text-yellow-400)`,
+  tw`hocus:(outline-none)`,
 
-  // Use props to conditionally style your components
-  variant === 'primary' && tw`bg-black text-white border-black`,
-
-  // Combine regular css with tailwind classes within backticks
-  variant === 'secondary' && [
+  variant === 'primary' && [
+    tw`
+    bg-netflix-red 
+    border-netflix-red 
+    hover:bg-[#F40612] active:bg-[#BB0A12]`,
     css`
-      box-shadow: 0 0.1em 0 0 rgba(0, 0, 0, 0.25);
+      box-shadow: 0 1px 0 rgb(0 0 0 / 45%);
+      background-image: linear-gradient(to bottom, #e50914, #db0510);
     `,
-    tw`border-2 border-yellow-600`,
   ],
 
-  // Conditional props can be used
-  isSmall ? tw`text-sm` : tw`text-lg`,
+  variant === 'secondary' &&
+    tw`
+    border-transparent 
+    bg-[rgba(255, 255, 255, 0.5)] 
+    hover:bg-[rgba(255, 255, 255, 0.25)]`,
 
-  // The theme import can supply values from your tailwind.config.js
-  css`
-    color: ${theme`colors.white`};
-  `,
+  variant === 'white' && [
+    tw`
+    bg-white 
+    text-dark 
+    border-white 
+    hover:bg-[rgba(255, 255, 255, 0.75)]`,
+  ],
+
+  variant === 'border' && [
+    tw`
+    border-[#888]
+    bg-transparent  
+    hover:bg-[rgba(150,150,150,.3)]
+    uppercase
+    `,
+  ],
 ])
 
 export default Button

@@ -4,7 +4,7 @@ import tw, { css, theme, GlobalStyles as BaseStyles } from 'twin.macro'
 
 const customStyles = css({
   body: {
-    backgroundColor: '#141414',
+    backgroundColor: '#181818',
     color: '#FFFFFF',
     overflowX: 'hidden',
   },
