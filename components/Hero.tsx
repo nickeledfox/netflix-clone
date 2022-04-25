@@ -48,7 +48,6 @@ const Hero = ({ netflixOriginals }: HeroProps) => {
           <Button variant={'secondary'}>
             More Info <HiInformationCircle tw="h-5 w-5 md:h-8 md:w-8" />
           </Button>
-          <Button variant={'border'}>Test</Button>
         </BtnWraper>
       </Container>
     </Wrapper>
@@ -61,7 +60,7 @@ flex-col
 justify-end
 pt-72
 md:pt-64
-lg:pt-96
+lg:pt-[45%]
 lg:h-[65vh]
 `
 const BtnWraper = tw(FlexWrapper)`space-x-3 py-5`
@@ -75,7 +74,7 @@ h-[95vh] w-screen
 const Title = tw(Heading)`pb-6`
 
 const MovieOverview = tw(Paragraph)`
-max-w-xs md:max-w-lg lg:max-w-2xl 
+max-w-xs md:max-w-lg lg:max-w-2xl
 `
 
 export default Hero

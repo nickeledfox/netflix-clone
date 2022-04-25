@@ -1,7 +1,7 @@
 import tw from 'twin.macro'
 
 export const FlexWrapper = tw.div`flex items-center`
-export const Container = tw.div`container`
+export const Container = tw.div`container lg:max-w-['1600px']`
 
 export const PageWrapper = tw.div`
 relative 
@@ -16,6 +16,5 @@ md:text-5xl md:leading-9
 lg:text-6xl lg:leading-10`
 
 export const Paragraph = tw.p`
-text-sm md:text-lg md:leading-4
-lg:leading-5
+text-sm md:text-lg
 `
