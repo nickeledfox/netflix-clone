@@ -14,7 +14,10 @@ const Button = styled.button(({ variant }: ButtonProps) => [
   text-sm font-semibold capitalize
   transition 
   md:py-2.5 md:px-8 md:text-xl 
-  whitespace-nowrap border-[1px]`,
+  whitespace-nowrap border-[1px]
+  
+  [> i]:(text-2xl md:text-3xl lg:text-4xl) // > Button Icons
+  `,
 
   tw`hocus:(outline-none)`,
 
@@ -40,7 +43,9 @@ const Button = styled.button(({ variant }: ButtonProps) => [
     bg-white 
     text-dark 
     border-white 
-    hover:bg-[rgba(255, 255, 255, 0.75)]`,
+    hover:bg-[rgba(255, 255, 255, 0.75)]
+    hover:border-transparent
+    `,
   ],
 
   variant === 'border' && [

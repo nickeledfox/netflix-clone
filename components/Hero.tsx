@@ -42,11 +42,16 @@ const Hero = ({ netflixOriginals }: HeroProps) => {
 
         <BtnWraper>
           <Button variant={'white'}>
-            <FaPlay tw="h-4 w-4 text-black md:h-7 md:w-7" />
+            <i tw="text-dark">
+              <FaPlay />
+            </i>
             Play
           </Button>
           <Button variant={'secondary'}>
-            More Info <HiInformationCircle tw="h-5 w-5 md:h-8 md:w-8" />
+            More Info
+            <i>
+              <HiInformationCircle />
+            </i>
           </Button>
         </BtnWraper>
       </Container>
@@ -75,6 +80,7 @@ const Title = tw(Heading)`pb-6`
 
 const MovieOverview = tw(Paragraph)`
 max-w-xs md:max-w-lg lg:max-w-2xl
+text-shadow-md
 `
 
 export default Hero

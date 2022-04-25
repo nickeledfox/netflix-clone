@@ -26,4 +26,5 @@ module.exports = {
       center: true, // Centering will disable any margin styles
     },
   },
+  plugins: [require('tailwindcss-textshadow')],
 }
