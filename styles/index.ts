@@ -12,8 +12,9 @@ lg:h-[140vh]
 export const Heading = tw.h1`
 text-4xl
 font-bold
-md:text-5xl md:leading-9 
-lg:text-6xl lg:leading-10`
+md:text-5xl 
+lg:text-6xl
+`
 
 export const Paragraph = tw.p`
 text-sm md:text-lg

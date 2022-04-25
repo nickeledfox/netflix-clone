@@ -42,7 +42,7 @@ const Hero = ({ netflixOriginals }: HeroProps) => {
 
         <BtnWraper>
           <Button variant={'white'}>
-            <i tw="text-dark">
+            <i>
               <FaPlay />
             </i>
             Play
@@ -68,7 +68,7 @@ md:pt-64
 lg:pt-[45%]
 lg:h-[65vh]
 `
-const BtnWraper = tw(FlexWrapper)`space-x-3 py-5`
+const BtnWraper = tw(FlexWrapper)`space-x-3 py-5 lg:pt-10`
 
 const Banner = tw.div`
 absolute z-[-10]
@@ -76,11 +76,13 @@ top-0 left-0
 h-[95vh] w-screen 
 `
 
-const Title = tw(Heading)`pb-6`
+const Title = tw(Heading)`pb-4 lg:pb-6`
 
 const MovieOverview = tw(Paragraph)`
-max-w-xs md:max-w-lg lg:max-w-2xl
 text-shadow-md
+max-w-xs leading-[1.10rem]
+md:max-w-lg md:leading-5
+lg:max-w-2xl
 `
 
 export default Hero

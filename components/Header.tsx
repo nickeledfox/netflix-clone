@@ -66,7 +66,7 @@ z-10
 w-full 
 px-4 py-4 
 transition 
-lg:px-12 lg:py-2
+lg:px-12 lg:py-3
 bg-gradient-to-b from-[rgba(20, 20, 20, 0.5)] to-[rgba(20, 20, 20, 0)] 
 `
 
