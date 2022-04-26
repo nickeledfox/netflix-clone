@@ -22,7 +22,9 @@ const Hero = ({ netflixOriginals }: HeroProps) => {
     )
   }, [netflixOriginals])
 
-  const BANNER = `${IMAGE_URL}${movie?.backdrop_path || movie?.poster_path}`
+  const BANNER = `${IMAGE_URL}/original${
+    movie?.backdrop_path || movie?.poster_path
+  }`
 
   return (
     <Wrapper>
@@ -66,9 +68,11 @@ justify-end
 pt-72
 md:pt-64
 lg:pt-[45%]
-lg:h-[65vh]
+lg:h-[75vh]
 `
-const BtnWraper = tw(FlexWrapper)`space-x-3 py-5 lg:pt-10`
+const BtnWraper = tw(FlexWrapper)`
+space-x-3 py-5 
+lg:pt-10 lg:pb-16`
 
 const Banner = tw.div`
 absolute z-[-10]

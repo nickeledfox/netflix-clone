@@ -16,6 +16,9 @@ font-semibold
 md:text-5xl md:font-black
 lg:text-6xl
 `
+export const Heading2 = tw.h2`
+text-sm md:text-2xl
+`
 
 export const Paragraph = tw.p`
 text-sm md:text-lg

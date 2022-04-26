@@ -2,7 +2,7 @@ import tw from 'twin.macro'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-import { Header, Hero, Button } from '../components'
+import { Header, Hero, Row } from '../components'
 import { PageWrapper, Container } from '../styles'
 import requests from '../services/api/moviesReq'
 import { Movie } from '../types/typing'
@@ -37,9 +37,14 @@ const Home: React.FC<HomeProps> = ({
       <main>
         <Hero netflixOriginals={netflixOriginals} />
         <section>
-          <Container>
-            <p>Hello World</p>
-          </Container>
+          <Row title="Trending Now" movies={trendingNow} />
+          <Row title="Top Rated" movies={topRated} />
+          <Row title="Action Thrillers" movies={actionMovies} />
+          {/* My List */}
+          <Row title="Comedies" movies={comedyMovies} />
+          <Row title="Scary Movies" movies={horrorMovies} />
+          <Row title="Romance Movies" movies={romanceMovies} />
+          <Row title="Documentaries" movies={documentaries} />
         </section>
       </main>
     </PageWrapper>

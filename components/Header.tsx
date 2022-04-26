@@ -62,7 +62,7 @@ flex
 justify-between 
 fixed 
 top-0 
-z-10 
+z-40 
 w-full 
 px-4 py-4 
 transition 
@@ -83,8 +83,10 @@ cursor-pointer
 text-sm
 font-light
 transition
-text-[#e5e5e5]
+text-light
 md:hocus:text-white
+md:focus:font-normal
+md:active:font-normal
 `
 
 export default Header
