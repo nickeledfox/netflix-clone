@@ -9,14 +9,15 @@ interface Props {
 }
 
 const Thumbnail = ({ movie }: Props) => {
-  const BANNER = `${IMAGE_URL}/w500${
+  const POSTER = `${IMAGE_URL}/w500${
     movie?.backdrop_path || movie?.poster_path
   }`
 
   return (
     <ThumbContainer>
       <Image
-        src={BANNER}
+        src={POSTER}
+        alt="movie poster"
         tw="rounded-sm object-cover md:rounded"
         layout="fill"
       />
@@ -25,7 +26,7 @@ const Thumbnail = ({ movie }: Props) => {
 }
 
 const ThumbContainer = tw.div`
-h-28 md:h-36 lg:h-[155px] 
+h-40 lg:h-[155px] 
 min-w-[260px] md:min-w-[300px] 
 relative 
 cursor-pointer 
