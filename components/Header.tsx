@@ -1,4 +1,4 @@
-import tw, { css } from 'twin.macro'
+import tw from 'twin.macro'
 
 import { FiSearch } from 'react-icons/fi'
 import Logo from './Logo'
@@ -28,7 +28,7 @@ const Header = () => {
 
   return (
     <FixedHeader css={isScrolled && { background: '#141414' }}>
-      <Wrap tw="md:space-x-10">
+      <Wrap>
         <Logo />
         <NavList>
           {/* TODO: map when path and data are available */}
@@ -70,7 +70,7 @@ lg:px-12 lg:py-3
 bg-gradient-to-b from-[rgba(20, 20, 20, 0.5)] to-[rgba(20, 20, 20, 0)] 
 `
 
-const Wrap = tw(FlexWrapper)`space-x-4`
+const Wrap = tw(FlexWrapper)`space-x-4 md:space-x-10`
 
 const NavList = tw.nav`
 hidden 

@@ -4,7 +4,7 @@ import { Movie } from '../types/typing'
 import Image from 'next/image'
 import { FaPlay } from 'react-icons/fa'
 import { HiInformationCircle } from 'react-icons/hi'
-import { Heading, Paragraph, Container, FlexWrapper } from '../styles'
+import { Heading, Paragraph, FlexWrapper, LDiv } from '../styles'
 import Button from './Button'
 
 import { useEffect, useState } from 'react'
@@ -38,7 +38,7 @@ const Hero = ({ netflixOriginals }: HeroProps) => {
           objectFit="cover"
         />
       </Banner>
-      <Container>
+      <LDiv>
         <Title>{movie?.title || movie?.name || movie?.original_name}</Title>
         <MovieOverview>{movie?.overview}</MovieOverview>
 
@@ -56,7 +56,7 @@ const Hero = ({ netflixOriginals }: HeroProps) => {
             More Info
           </Button>
         </BtnWraper>
-      </Container>
+      </LDiv>
     </Wrapper>
   )
 }
@@ -70,6 +70,7 @@ md:pt-64
 lg:pt-[45%]
 lg:h-[75vh]
 `
+
 const BtnWraper = tw(FlexWrapper)`
 space-x-3 py-5 
 lg:pt-10 lg:pb-16`
